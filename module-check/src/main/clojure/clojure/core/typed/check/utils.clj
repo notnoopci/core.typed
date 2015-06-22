@@ -460,7 +460,7 @@
            (check-ns dep))
          ;check normal dependencies
          (doseq [dep (ns-depsu/deps-for-ns nsym)
-                 :when (ns-depsu/should-check-ns? nsym)]
+                 :when (ns-depsu/should-check-ns? dep)]
            (check-ns dep))
          ; ignore ns declaration
          (let [ns-form (ns-depsu/ns-form-for-ns nsym)
